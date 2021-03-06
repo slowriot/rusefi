@@ -41,17 +41,13 @@
 #include "custom_engine.h"
 #include "engine_template.h"
 #include "bmw_m73.h"
-
 #include "dodge_neon.h"
 #include "dodge_ram.h"
-
 #include "ford_aspire.h"
 #include "ford_1995_inline_6.h"
-
 #include "nissan_primera.h"
 #include "honda_accord.h"
 #include "GY6_139QMB.h"
-
 #include "mazda_miata.h"
 #include "mazda_miata_1_6.h"
 #include "mazda_miata_na8.h"
@@ -59,7 +55,6 @@
 #include "mazda_miata_vvt.h"
 #include "mazda_626.h"
 #include "m111.h"
-
 #include "citroenBerlingoTU3JP.h"
 #include "mitsubishi.h"
 #include "subaru.h"
@@ -73,6 +68,8 @@
 #include "ford_festiva.h"
 #include "lada_kalina.h"
 #include "honda_600.h"
+#include "audi_avp.h"
+
 #include "boost_control.h"
 #if EFI_IDLE_CONTROL
 #include "idle_thread.h"
