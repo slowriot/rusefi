@@ -206,6 +206,13 @@ typedef enum {
 	BMW_M73_MRE = 104,
 	BMW_M73_MRE_SLAVE = 105,
 
+  /**
+   * Audi 40v 4.2 V8 with VVT
+   * https://rusefi.com/forum/viewtopic.php?f=2&t=1959
+   */
+  AUDI_AVP = ET_AUDI_AVP,
+
+
 	Force_4_bytes_size_engine_type = ENUM_32_BITS,
 } engine_type_e;
 
