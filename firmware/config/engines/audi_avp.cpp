@@ -56,8 +56,6 @@ void setAudiAVP(DECLARE_CONFIG_PARAMETER_SIGNATURE) {
   engineConfiguration->ignitionPins[5]   = GPIOG_8;   // "Ign 6"        # pin 31/black35
   engineConfiguration->ignitionPins[6]   = GPIOG_7;   // "Ign 7"        # pin 30/black35
   engineConfiguration->ignitionPins[7]   = GPIOG_6;   // "Ign 8"        # pin 29/black35
-
-  setProteusHitachiEtbDefaults(PASS_CONFIG_PARAMETER_SIGNATURE);
 }
 
 
