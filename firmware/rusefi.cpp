@@ -14,7 +14,7 @@
  *
  * @section sec_intro Intro
  *
- * rusEfi is implemented based on the idea that with modern 100+ MHz microprocessors the relatively
+ * rusEFI is implemented based on the idea that with modern 100+ MHz microprocessors the relatively
  * undemanding task of internal combustion engine control could be implemented in a high-level, processor-independent
  * (to some extent) manner. Thus the key concepts of rusEfi: dependency on high-level hardware abstraction layer, software-based PWM etc.
  *
@@ -93,6 +93,8 @@
  * <br>See flash_main.cpp
  *
  *
+ * todo: merge https://github.com/rusefi/rusefi/wiki/Dev-Tips into here
+ *
  * @section sec_fuel_injection Fuel Injection
  *
  *
@@ -122,6 +124,8 @@
 #include "custom_engine.h"
 #include "engine_math.h"
 #include "mpu_util.h"
+#include "tunerstudio.h"
+#include "mmc_card.h"
 
 #if EFI_HD44780_LCD
 #include "lcd_HD44780.h"
@@ -211,10 +215,18 @@ void runRusEfi(void) {
 	 */
 	initializeConsole(&sharedLogger);
 
+#if EFI_TUNER_STUDIO
+	startTunerStudioConnectivity();
+#endif /* EFI_TUNER_STUDIO */
+
 	/**
 	 * Initialize hardware drivers
 	 */
 	initHardware(&sharedLogger);
+
+#if EFI_FILE_LOGGING
+	initMmcCard();
+#endif /* EFI_FILE_LOGGING */
 
 	initStatusLoop();
 	/**
